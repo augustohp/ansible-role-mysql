@@ -1,8 +1,7 @@
-# Ansible Role: MySQL
-
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-mysql.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-mysql)
+# Ansible Role: MySQL [![Build Status](https://travis-ci.org/augustohp/ansible-role-mysql.svg?branch=master)](https://travis-ci.org/augustohp/ansible-role-mysql)
 
 Installs MySQL server on RHEL/CentOS or Debian/Ubuntu servers.
+This is a fork [from geerlingguy/ansible-role-mysql][1]
 
 ## Requirements
 
@@ -88,4 +87,8 @@ MIT / BSD
 
 ## Author Information
 
-This role was created in 2014 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](http://ansiblefordevops.com/).
+- This role was created in 2014 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](http://ansiblefordevops.com/).
+- Minor changes by [Augusto Pascutti][2], author of chaos.
+
+[1]: https://github.com/geerlingguy/ansible-role-mysql
+[2]: http://github.com/augustohp
