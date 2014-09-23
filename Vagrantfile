@@ -16,7 +16,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
       debian.vm.provision "ansible" do |ansible|
           ansible.playbook = "test.yml"
-          ansible.inventory_path = "inventory/vagrant.ini"
           ansible.limit = "all"
       end
   end
