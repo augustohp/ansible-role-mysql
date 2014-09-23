@@ -1,4 +1,5 @@
 ---
+mysql_conf_file: /etc/my.cnf
 mysql_user_home: /root
 mysql_root_username: root
 mysql_root_password: root

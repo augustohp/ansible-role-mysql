@@ -2,6 +2,7 @@
 #
 # Debian-family variables.
 ---
+mysql_conf_file: /etc/mysql/my.cnf
 mysql_daemon: mysql
 mysql_include_dirs:
   - "/etc/mysql/conf.d/"
