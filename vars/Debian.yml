@@ -1,5 +1,12 @@
+# vars/Debian.yml
+#
+# Debian-family variables.
 ---
 mysql_daemon: mysql
+mysql_include_dirs:
+  - "/etc/mysql/conf.d/"
 mysql_packages:
   - mysql-server
   - python-mysqldb
+
+# ex: ft=ansible et ts=2 sw=2:

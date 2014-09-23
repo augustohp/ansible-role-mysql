@@ -51,3 +51,5 @@ mysql_syslog_tag: mysqld
 # databases and users settings
 mysql_databases: []
 mysql_users: []
+
+mysql_include_dirs: []

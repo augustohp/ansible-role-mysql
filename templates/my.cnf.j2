@@ -60,3 +60,8 @@ skip-syslog
 log-error = {{ mysql_log_error }}
 {% endif %}
 pid-file = /var/run/mysqld/mysqld.pid
+
+# Inclusion of additional files
+{% for filename in mysql_include_dirs  %}
+!includedir {{ filename }}
+{% endfor %}
