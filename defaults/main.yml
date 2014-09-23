@@ -1,6 +1,10 @@
 ---
 mysql_conf_file: /etc/my.cnf
+mysql_user: mysql
 mysql_user_home: /root
+mysql_initd: /etc/init.d
+mysql_multi_daemon: mysql_multi
+mysql_save_root_credentials: true
 mysql_root_username: root
 mysql_root_password: root
 
@@ -53,4 +57,6 @@ mysql_syslog_tag: mysqld
 mysql_databases: []
 mysql_users: []
 
+# No mysqld_multi servers
+mysql_multi: []
 mysql_include_dirs: []

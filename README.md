@@ -80,6 +80,28 @@ geerlingguy.repo-epel or geerlingguy.repo-remi), those repositories can be list
 ed under this variable (e.g. `remi,epel`). This can be handy, as an example, if
 you want to install later versions of MySQL.
 
+### Multiple MySQL instances
+
+  mysql_multi:
+      - GNR: 1
+        port: 3306
+        pid-file: "/var/run/mysqld/mysqld1.pid"
+        socket: "/var/run/mysqld/mysql1.sock"
+      - GNR: 2
+        port: 3307
+        pid-file: "/var/run/mysqld/mysqld2.pid"
+        socket: "/var/run/mysqld/mysql2.sock"
+      - GNR: 3
+        port: 3308
+        pid-file: "/var/run/mysqld/mysqld3.pid"
+        socket: "/var/run/mysqld/mysql3.sock"
+
+Enables multiple instances of MySQL under the same host, all configurations above
+(`GNR`, `port`, pid-file` and `socket`) are obrigatory.
+
+Using multiple instances disables (the original) single instance favouring just
+multiple instance management and execution.
+
 ## Example Playbook
 
     - hosts: db-servers
