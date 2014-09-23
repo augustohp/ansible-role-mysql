@@ -19,4 +19,20 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           ansible.limit = "all"
       end
   end
+
+  config.vm.define "centos6" do |centos|
+      centos.vm.box = "chef/centos-6.5"
+      centos.vm.network "private_network", ip: "192.168.42.32"
+      centos.vm.hostname = "centos.mysql.local"
+
+      centos.vm.provider :virtualbox do |vbox|
+          vbox.name = "centos.ansible-mysql-role"
+      end
+
+      centos.vm.provision "ansible" do |ansible|
+          ansible.playbook = "test.yml"
+          ansible.limit = "all"
+      end
+  end
+
 end
